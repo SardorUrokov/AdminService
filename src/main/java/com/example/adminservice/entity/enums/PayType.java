@@ -4,4 +4,5 @@ public enum PayType {
     CASH,
     PAYME,
     CLICK
+
 }

@@ -1,4 +1,4 @@
-package com.example.adminservice.entity.template;
+package com.example.adminservice.entity.templete;
 
 import lombok.*;
 
@@ -7,15 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
 @Getter
 @Setter
 @ToString
-public class AbsNameEntity {
 
+public class AbsNameEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

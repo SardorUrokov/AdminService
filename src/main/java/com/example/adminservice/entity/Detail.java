@@ -1,31 +1,26 @@
 package com.example.adminservice.entity;
 
-import com.example.adminservice.entity.template.AbsNameEntity;
+import com.example.adminservice.entity.templete.AbsNameEntity;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import java.sql.Timestamp;
+import javax.persistence.*;
 
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
+@Entity
 @Setter
+@Getter
 @ToString
 @Where(clause = "deleted=false")
 @SQLDelete(sql = "update detail set deleted=true,status=false where id=?")
 public class Detail extends AbsNameEntity {
-
     //kimga tegishli ekanligi
     @ManyToOne
     private User user;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ord_id")
     private Order order;
 
@@ -34,5 +29,5 @@ public class Detail extends AbsNameEntity {
     private Product product;
 
     @Column(nullable = false)
-    private short quantity; //1000X2
+    private short quantity;
 }

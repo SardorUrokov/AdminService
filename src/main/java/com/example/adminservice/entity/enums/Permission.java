@@ -1,7 +1,6 @@
 package com.example.adminservice.entity.enums;
 
 public enum Permission {
-
     ADD_CATEGORY,
     ADD_PERMISSIONS_ROLE,
     ADD_PRODUCT,
@@ -26,5 +25,4 @@ public enum Permission {
 
     VIEW_ROLE,
     VIEW_USER,
-
 }

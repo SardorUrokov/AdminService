@@ -1,8 +1,7 @@
 package com.example.adminservice.entity;
 
-import com.example.adminservice.entity.template.AbsNameEntity;
+import com.example.adminservice.entity.templete.AbsNameEntity;
 import lombok.*;
-import org.hibernate.validator.constraints.pl.NIP;
 
 import javax.persistence.Entity;
 
@@ -13,7 +12,6 @@ import javax.persistence.Entity;
 @Getter
 @ToString
 public class Address extends AbsNameEntity {
-
     private Double lat;
     private Double lon;
     private String target;

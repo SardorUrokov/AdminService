@@ -1,29 +1,31 @@
 package com.example.adminservice.entity;
 
-import com.example.adminservice.entity.template.AbsNameEntity;
+import com.example.adminservice.entity.templete.AbsNameEntity;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
+@Entity
 @Setter
+@Getter
 @ToString
 @Where(clause = "deleted=false")
 @SQLDelete(sql = "update product set deleted=true,status=false where id=?")
 public class Product extends AbsNameEntity {
-
     @ManyToOne
     private Category category;
-    private String photo; //Attachment qo'shib kelish bazada
+    @OneToOne
+    private Attachment photo;
     private Double price;
     private String description;
     //chegirma
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Discount discount;
 }

@@ -1,7 +1,7 @@
 package com.example.adminservice.entity;
 
 import com.example.adminservice.entity.enums.Permission;
-import com.example.adminservice.entity.template.AbsNameEntity;
+import com.example.adminservice.entity.templete.AbsNameEntity;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -18,11 +18,9 @@ import java.util.List;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update roles set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update role set deleted=true,status=false where id=?")
 public class Role extends AbsNameEntity {
-
     @ElementCollection
     @Enumerated
     private List<Permission> permissionList;
-
 }

@@ -1,6 +1,6 @@
 package com.example.adminservice.entity;
 
-import com.example.adminservice.entity.template.AbsEntity;
+import com.example.adminservice.entity.templete.AbsEntity;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -15,7 +15,6 @@ import java.util.List;
 @Getter
 @ToString
 public class Favourite extends AbsEntity {
-
     @OneToOne
     private User user;
     @OneToMany

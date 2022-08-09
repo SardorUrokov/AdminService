@@ -15,7 +15,7 @@ import java.util.Date;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update category set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update filial set deleted=true,status=false where id=?")
 public class Filial extends AbsNameEntity {
 
     @Temporal(TemporalType.TIME)

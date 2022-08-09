@@ -2,13 +2,11 @@ package com.example.adminservice.entity;
 
 import com.example.adminservice.entity.enums.OrderStatus;
 import com.example.adminservice.entity.template.AbsEntity;
-import com.example.adminservice.entity.template.AbsNameEntity;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.List;
 
 @Entity(name = "orders")
@@ -23,10 +21,10 @@ public class Order extends AbsEntity {
 
     //kimga tegishli ekani qo'shish kk
     @ManyToOne
-    private User user;
+    private User user4;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus;
+    private OrderStatus orderStatus = OrderStatus.NEW;
 
     @OneToMany(mappedBy = "order")
     private List<Detail> detailList;

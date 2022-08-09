@@ -11,8 +11,8 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
-
-    @Mapping(target = "category.id",source = "productDto.categoryId")
-    Product toEntity(ProductDto productDto);
+//
+//    @Mapping(target = "category.id",source = "productDto.categoryId")
+//    Product toEntity(ProductDto productDto);
 
 }

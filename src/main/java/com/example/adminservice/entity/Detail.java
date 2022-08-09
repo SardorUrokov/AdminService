@@ -18,7 +18,7 @@ import java.sql.Timestamp;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update category set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update detail set deleted=true,status=false where id=?")
 public class Detail extends AbsNameEntity {
 
     //kimga tegishli ekanligi

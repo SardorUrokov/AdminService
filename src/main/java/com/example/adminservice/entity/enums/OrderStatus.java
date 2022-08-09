@@ -6,6 +6,6 @@ public enum OrderStatus {
     IN_PROGRESS,
     APPROVED,
     DELIVERED,
-    CANCELED, //mijoz
-    REJECTED //tizim
+    CANCELED,//mijoz
+    REJECTED//tizim
 }

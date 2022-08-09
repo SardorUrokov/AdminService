@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update category set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update product set deleted=true,status=false where id=?")
 public class Product extends AbsNameEntity {
 
     @ManyToOne

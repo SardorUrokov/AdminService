@@ -12,11 +12,11 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
 
-
-    @Mapping(target = "parent.id",source = "categoryDto.parentId")
-    Category toEntity(CategoryDto categoryDto);
-
-    CategoryDto toDto(Category category);
-
-    List<CategoryDto> toDtoList(List<Category> categoryList);
+//
+//    @Mapping(target = "parent.id",source = "categoryDto.parentId")
+//    Category toEntity(CategoryDto categoryDto);
+//
+//    CategoryDto toDto(Category category);
+//
+//    List<CategoryDto> toDtoList(List<Category> categoryList);
 }

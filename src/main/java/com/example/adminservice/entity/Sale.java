@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update category set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update sale set deleted=true,status=false where id=?")
 public class Sale extends AbsNameEntity {
 
     private Timestamp start;

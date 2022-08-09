@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass

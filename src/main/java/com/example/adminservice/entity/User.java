@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update orders set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update users set deleted=true,status=false where id=?")
 //ishchilar
 public class User extends AbsEntity implements UserDetails {
     //
@@ -34,6 +34,7 @@ public class User extends AbsEntity implements UserDetails {
 
     @OneToMany
     private List<Address> addressList;
+
     @ManyToOne
     private Filial filial;
     private boolean enabled = true;

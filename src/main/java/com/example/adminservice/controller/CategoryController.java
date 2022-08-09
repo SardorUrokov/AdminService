@@ -18,17 +18,17 @@ public class CategoryController {
     private final CategoryMapper categoryMapper;
 
     private final CategoryRepository categoryRepository;
-
-    @PostMapping
-    public ResponseEntity<?> save(@RequestBody CategoryDto categoryDto) {
-        Category save = categoryRepository.save(categoryMapper.toEntity(categoryDto));
-        return ResponseEntity.status(Objects.isNull(save.getId()) ? 409 : 200).body(save);
-    }
-
-    @GetMapping
-    public ResponseEntity<?> getAll(){
-     return ResponseEntity.ok(categoryMapper.toDtoList(categoryRepository.findAll()));
-    }
+//
+//    @PostMapping
+//    public ResponseEntity<?> save(@RequestBody CategoryDto categoryDto) {
+//        Category save = categoryRepository.save(categoryMapper.toEntity(categoryDto));
+//        return ResponseEntity.status(Objects.isNull(save.getId()) ? 409 : 200).body(save);
+//    }
+//
+//    @GetMapping
+//    public ResponseEntity<?> getAll(){
+//     return ResponseEntity.ok(categoryMapper.toDtoList(categoryRepository.findAll()));
+//    }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getOne(@PathVariable Long id){

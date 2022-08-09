@@ -18,7 +18,7 @@ import java.util.List;
 @Setter
 @ToString
 @Where(clause = "deleted=false")
-@SQLDelete(sql = "update role set deleted=true,status=false where id=?")
+@SQLDelete(sql = "update roles set deleted=true,status=false where id=?")
 public class Role extends AbsNameEntity {
 
     @ElementCollection

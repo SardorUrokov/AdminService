@@ -1,6 +1,5 @@
 package com.example.adminservice.mapper;
 
-import com.example.adminservice.dto.CategoryDto;
 import com.example.adminservice.entity.Category;
 import com.example.adminservice.repository.CategoryRepository;
 import org.hibernate.annotations.Target;

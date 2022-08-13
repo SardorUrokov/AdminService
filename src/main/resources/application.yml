@@ -5,4 +5,4 @@ spring:
     name: AdminService
   mvc:
     servlet:
-      path: /api/Admin
+      path: /api/admin

@@ -19,6 +19,7 @@ import java.util.List;
 @Where(clause = "deleted=false")
 @SQLDelete(sql = "update category set deleted=true,status=false where id=?")
 public class Category extends AbsNameEntity {
+
     @ManyToOne
     private Category parent;
 

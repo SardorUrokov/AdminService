@@ -5,9 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 
-@NoArgsConstructor
-@Getter
-@ToString
 public class ResourceNotFoundException extends RuntimeException {
 
     //dasturni to'xtatmaydi
